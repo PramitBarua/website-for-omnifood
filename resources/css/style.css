@@ -1,6 +1,8 @@
-/*------------------------------
-orange color: #e67e22
-------------------------------*/
+/*------------------------------*/
+/*FONT*/
+/*------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 /*------------------------------*/
 /*BASIC SETUP*/
@@ -9,128 +11,75 @@ orange color: #e67e22
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;	
+	box-sizing: border-box;
 }
 
-html {
-	background-color: #fff;
+body {
 	color: #555;
-	font-family: 'Lato', 'Arial', sans-serif;
+	font-family: Lato;
 	font-weight: 300;
-	font-size: 20px;
-	text-rendering: optimizeLegibility;
+	font-size: 10px;
+	/* max-width: 1280px; */
+	height: 100%;
+	margin: auto;
 }
-
-/*------------------------------*/
-/*REUSABLE COMPONENT*/
-/*------------------------------*/
-
-.row {
-	max-width: 1140px;
-	margin: 0 auto;
-}
-
-section {
-	padding: 80px 0;
-}
-
-.box {
-	padding: 1%;
-	text-align: justify;
-}
-
-/*HEADINGS*/
 
 h1,
 h2,
 h3 {
 	font-weight: 300;
-	text-transform: uppercase;
-	
+}
+
+/*------------------------------*/
+/*REUSEABLE COMPONENT*/
+/*------------------------------*/
+section {
+	margin: 50px 0;
 }
 
 h1 {
-	margin-top: 0;
-	margin-bottom: 20px;
-	color: #fff;
+	text-transform: uppercase;
 	font-size: 240%;
-	word-spacing: 4px;
-	letter-spacing: 1px;
 }
 
 h2 {
 	font-size: 180%;
-	word-spacing: 2px;
-	text-align: center;
-	margin-bottom: 30px; 
-	letter-spacing: 1px;
 }
 
-h3 {
-	font-size: 110%;
-	margin-bottom: 15px;
+a {
+	text-decoration: none;
+	text-transform: uppercase;
 }
 
-h2:after {
-	display: block;
-	height: 2px;
-	background-color: #e67e22;
-	content: ' ';
-	width: 100px;
-	margin: 0 auto;
-	margin-top: 30px;
-}
-
-/* -------- PARAGRAPHS --------*/
-.long-copy {
-	line-height: 145%;
-	width: 70%;
-	margin: 0 15%;
-	text-align: center;
-}
-
-.box p {
-	font-size: 90%;
-}
-
-/* -------- ICONS --------*/
-.icon-big {
-	font-size: 350%;
-	display: block;
-	color: #e67e22;
-	margin-bottom: 10px;
-}
-
-/* --------BUTTONS --------*/
-
-.btn:link,
-.btn:visited {
+.btn {
 	display: inline-block;
 	padding: 10px 30px;
-	font-weight: 300;
-	text-decoration: none;
-	border-radius: 100px;
-	border: 1px solid #e67e22;
-	transition: background 0.2s, border 0.2s, color 0.2s;
+	margin-right: 10px;
+	border: 2px solid #ce6d17;
+	border-radius: 50px;
+	transition: background 0.5s, border 0.5s, color 0.5s;
+	/* font-size: 90%; */
 }
 
 .btn-full:link,
 .btn-full:visited {
-	background-color: #e67e22;
+	background-color: #ce6d17;
 	color: #fff;
-	margin-right: 15px;
+	margin-top: 10px;
 }
 
 .btn-ghost:link,
 .btn-ghost:visited {
-	color: #e67e22;
-	/*border: 1px solid #e67e22;*/
+	color: #ce6d17;
+
 }
 
-.btn:hover,
-.btn:active {
-	background-color: #ce6d17;
-	border-color: #ce6d17;
+.btn-full:hover,
+.btn-full:active,
+.btn-ghost:hover,
+.btn-ghost:active {
+	background-color: #a15512; 
+	border-color: #a15512;
 	color: #fff;
 }
 
@@ -139,51 +88,60 @@ h2:after {
 /*------------------------------*/
 
 header {
-	background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/hero.jpg);
+	display: grid;
+	grid-template-columns: 1fr 5fr;
+	grid-template-rows: 1fr 6fr;
+	align-items: center;
+	/* background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./images/hero.jpg'); */
+	
 	background-size: cover;
 	background-position: center;
 	height: 100vh;
+	/* border: 2px solid orange; */
 }
 
-.main-nav {	
-	float: right;
-	list-style: none;
-	margin-top: 50px;
+.nav__img {
+	width: 150px;
+	margin: 0 auto;
 }
 
-.main-nav li{
-	display: inline-block;
-	margin-left: 50px;
-	/*padding-right: 25px;*/
+.nav__links {
+	grid-row: 1;
+	grid-column: 2 / 5;
+	display: flex;
+	align-self: center;
+	justify-content: flex-end;
 }
 
-.main-nav li a:link,
-.main-nav li a:visited {
-	text-decoration: none;
+.nav__icon {
+
+}
+
+.nav__link:link,
+.nav__link:visited {
+	margin-right: 5%;
+	color: #e67e22;
+	padding-bottom: 4px;
+} 
+
+.nav__link:hover,
+.nav__link:active {
+	color: #ce6d17;
+	border-bottom: 1px solid #ce6d17;
+}
+
+.header-text {
+	grid-column: 2 / 5;
+	grid-row: 2;
+	padding-right: 5%;
 	color: #fff;
-	text-transform: uppercase;
-	font-size: 90%;
-	padding-bottom: 8px;
-	border-bottom: 2px solid transparent;
-	transition: border-bottom 0.2s;
 }
 
-.main-nav li a:hover,
-.main-nav li a:active {
-	border-bottom: 2px solid #e67e22;
-}
-
-.logo {
-	width: 100px;
-	height: auto;
-	float: left;
-	margin-top: 20px;
-}
-
-.hero-text-box {
-	position: absolute;
-	max-width: 1140px;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+/*------------------------------*/
+/*FEATURE*/
+/*------------------------------*/
+.feature {
+	display: grid;
+	grid-template-columns: repeat(4 1fr);
+	grid-template-rows: repeat(3 1fr);
 }

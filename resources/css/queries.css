@@ -1,0 +1,32 @@
+/* large laptop 1035px to 1450px */
+@media only screen and (max-width: 1450px) {
+	body { font-size: 20px; }
+}
+
+/* laptop 779px to 1034px */
+@media only screen and (max-width: 1034px) {
+	body { font-size: 18px; }
+}
+
+/* pad/tablet 436px to 778px */
+@media only screen and (max-width: 778px) {
+	body { font-size: 16px; }
+}
+
+/* large screen phone 386px to 435px */
+@media only screen and (max-width: 560px) {
+	body { font-size: 10px; }
+	.header-text { font-size: 55%; }
+	.feature__features { display: block; }
+	.favourite-meal { display: block; }
+}
+
+/* mid screen phone 331px to 385px */
+@media only screen and (max-width: 385px) {
+
+}
+
+/* small phone 0 to 330 px */
+@media only screen and (max-width: 330px) {
+
+}

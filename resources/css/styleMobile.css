@@ -1,0 +1,208 @@
+/*------------------------------*/
+/*FONT*/
+/*------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+/*------------------------------*/
+/*BASIC SETUP*/
+/*------------------------------*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	color: #555;
+	font-family: Lato;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 1.20;
+	/* word-spacing: 1.20; */
+	/* max-width: 1280px; */
+	height: 100%;
+	margin: auto;
+	overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+/*------------------------------*/
+/*REUSEABLE COMPONENT*/
+/*------------------------------*/
+section { margin: 30px 0; }
+
+h1 { font-size: 240%; }
+
+h2 {
+	font-size: 180%;
+	text-align: center;
+}
+
+h2:after {
+	display: block;
+	height: 3px;
+	width: 100px;
+	background-color: #f39c12;
+	content: " ";
+	margin: 0 auto;
+	margin-top: 15px;
+}
+
+h3 {
+	font-size: 120%;
+	text-align: center;
+}
+
+p {
+	font-size: 100%;
+	max-width: 600px;
+	margin: 20px auto;
+	padding: 0 10px;
+	text-align: justify;
+}
+
+a {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 120%
+}
+
+.btn {
+	display: inline-block;
+	padding: 10px 15px;
+	margin-right: 5px;
+	border: 2px solid #f39c12;
+	border-radius: 50px;
+	transition: background 0.25s, border 0.25s, color 0.25s;
+	/* font-size: 90%; */
+}
+
+.btn-full:link,
+.btn-full:visited,
+.btn-ghost:link,
+.btn-ghost:visited {
+	color: #fff;
+	margin-top: 10px;
+}
+
+.btn-full:link,
+.btn-full:visited {
+	background-color: #f39c12;	
+}
+
+.btn-full:hover,
+.btn-full:active,
+.btn-ghost:hover,
+.btn-ghost:active {
+	background-color: #ae6e09; 
+	border-color: #ae6e09;
+}
+
+/*------------------------------*/
+/*HEADER*/
+/*------------------------------*/
+
+header {
+	display: grid;
+	grid-template-rows: 1fr 6fr;
+	align-items: center;
+	/* background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./images/hero.jpg'); */
+	background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('./images/joseph-gonzalez-fdlZBWIP0aM-unsplash.jpg');
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+}
+
+.nav__img {
+	width: 10%;
+	/* border: 2px solid red; */
+}
+
+.nav__links {
+	/* grid-column: 2/4; */
+	list-style: none;
+	flex: 5;
+	display: flex;
+	justify-content: flex-end;
+	/* border: 2px solid blue; */
+}
+
+.nav__links li { margin-right: 4%; }
+
+.nav__link:link,
+.nav__link:visited {
+	display: inline-block;
+	color: #f39c12;
+	padding-bottom: 4px;
+} 
+
+.nav__link:hover,
+.nav__link:active {
+	color: #ae6e09;
+	border-bottom: 1px solid #ae6e09;
+}
+
+.header__text--container {
+	grid-row: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header-text { color: #fff; }
+
+/*------------------------------*/
+/*FEATURE*/
+/*------------------------------*/
+
+.feature__features {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 10px;
+	grid-auto-rows: minmax(100px, auto);
+}
+
+.big-icon {
+	width: 100%;
+	text-align: justify;
+	font-size: 240%;
+	color: #f39c12;
+}
+
+/*------------------------------*/
+/*FAVOURITE MEALS*/
+/*------------------------------*/
+
+.favourite-meal {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	background-color: #000;
+}
+
+ .meal-image { 	
+ 	overflow: hidden; 		
+ }
+
+ .meal-image img {
+ 	width: 100%;
+ 	transform: scale(1.15);
+ 	transition: transform  0.5s;
+ }
+
+ .meal-image img:hover {
+ 	transform: scale(1.03);
+ 	/* height: 100%; */
+ }
